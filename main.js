@@ -1,8 +1,11 @@
 intArray = createNumRandomOrderArray(1, 16)
 
+
+    
+
+
 console.log(intArray);
 var punteggio = 0
-
 
 
 
@@ -35,29 +38,32 @@ for (let i=1 ; i<101 ; i++) {
     
     newsquare.addEventListener("click",
     function(){
+          
+        if (!intArray.includes(i)) {
+        this.classList.add ("blue")
+        punteggio = punteggio + 1
 
+        console.log(punteggio);
        
         
-        if (!intArray.includes(i)) {
-            this.classList.add ("blue")
-            punteggio = punteggio + 1
-
-            console.log(punteggio);
-           
-            
-            
-            
-        }
-        else {
-            this.classList.add ("red")
-            
-            alert("mi dispiace hai perso! il tuo punteggio è:" + punteggio );
-    }
+        
         
     }
+    else {
+        this.classList.add ("red")
+        
+        
+        alert("mi dispiace hai perso! il tuo punteggio è:" + punteggio );
+        
+}
+}
+        
+   
+        
+    
     )
     
-}
+}       
 
 
 
